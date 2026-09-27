@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 
 def build_page():
-    assets = ROOT / 'assets'
+    assets = ROOT
     template = (assets / 'portfolio.html').read_text(encoding='utf-8')
     image = base64.b64encode((assets / 'hero-ribbon.png').read_bytes()).decode('ascii')
     resume = base64.b64encode((assets / 'Mahima_Thakar_Resume.pdf').read_bytes()).decode('ascii')
